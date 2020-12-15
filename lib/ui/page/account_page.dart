@@ -67,9 +67,12 @@ class _AccountPageState extends State<AccountPage> {
                           ),
                           CircleAvatar(
                             radius: 100,
-                            backgroundImage: NetworkImage(user == null
-                                ? 'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'
-                                : user.profilePic),
+                            backgroundImage: user == null
+                                ? NetworkImage(
+                                    'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png')
+                                : NetworkImage(user.profilePic == ""
+                                    ? 'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'
+                                    : user.profilePic),
                           ),
                           SizedBox(
                             height: 10,
