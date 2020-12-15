@@ -10,7 +10,7 @@ class AuthServices {
     try {
       UserCredential result = await auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      Users users = result.user.convertToUser(name);
+      Users users = result.user.convertToUser(name, "");
       auth.signOut();
       await UserServices.updateUser(users);
       msg = "success";
@@ -35,5 +35,15 @@ class AuthServices {
     }
 
     return msg;
+  }
+
+  static Future<bool> signOut() async {
+    bool result = false;
+    await auth.signOut().whenComplete(() => result = true);
+    return result;
+  }
+
+  static String getCurrentUID() {
+    return auth.currentUser.uid;
   }
 }

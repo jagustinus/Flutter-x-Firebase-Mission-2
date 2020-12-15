@@ -2,7 +2,7 @@ part of 'service.dart';
 
 class ProductServices {
   static CollectionReference productCol =
-      FirebaseFirestore.instance.collection("product");
+      FirebaseFirestore.instance.collection("products");
   static DocumentReference productDoc;
 
   // setup Firestore Storage
