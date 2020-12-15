@@ -38,4 +38,31 @@ class ProductServices {
       return false;
     }
   }
+
+  static Future<bool> updateProduct(
+      String id, String name, String price) async {
+    await Firebase.initializeApp();
+    return await productCol
+        .doc(id)
+        .update({'name': name, 'price': price})
+        .then((value) => true)
+        .catchError((error) => false);
+  }
+
+  static Future<bool> deleteProduct(Products product) async {
+    await Firebase.initializeApp();
+    if (product.id != null) {
+      ref = FirebaseStorage.instance
+          .ref()
+          .child("images")
+          .child(product.id + ".png");
+
+      ref.delete();
+      productCol.doc(product.id).delete();
+
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

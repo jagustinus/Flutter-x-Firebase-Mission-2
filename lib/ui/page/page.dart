@@ -15,4 +15,5 @@ part 'auth_screen/signup_page.dart';
 part 'main_menu.dart';
 part 'product_screen/add_page.dart';
 part 'product_screen/data_page.dart';
+part 'product_screen/edit_page.dart';
 part 'account_page.dart';
