@@ -1,4 +1,4 @@
-part of 'page.dart';
+part of '../page.dart';
 
 class SignInPage extends StatefulWidget {
   @override

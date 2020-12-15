@@ -1,4 +1,4 @@
-part of 'page.dart';
+part of '../page.dart';
 
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key key}) : super(key: key);

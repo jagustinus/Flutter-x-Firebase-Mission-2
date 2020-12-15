@@ -1,4 +1,4 @@
-part of 'page.dart';
+part of '../page.dart';
 
 class AddPage extends StatefulWidget {
   AddPage({Key key}) : super(key: key);

@@ -1,4 +1,4 @@
-part of 'page.dart';
+part of '../page.dart';
 
 class DataPage extends StatefulWidget {
   DataPage({Key key}) : super(key: key);
