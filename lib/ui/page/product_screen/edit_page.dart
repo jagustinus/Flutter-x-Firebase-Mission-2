@@ -162,9 +162,9 @@ class _EditPageState extends State<EditPage> {
                                   context: context,
                                   builder: (context) {
                                     return AlertDialog(
-                                      title: Text("Signout Confirmation"),
-                                      content:
-                                          Text("Are you sure to signout ?"),
+                                      title: Text("Delete Confirmation"),
+                                      content: Text(
+                                          "Are you sure want to delete this product ?"),
                                       actions: [
                                         FlatButton(
                                           onPressed: () async {
